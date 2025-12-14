@@ -12,6 +12,8 @@ variable "env" {
 #------------------------------
 resource "aws_s3_bucket" "remote" {
   for_each = toset(var.env)
+
+  # s3名 大文字は使用禁止
   bucket   = "<S3-BUCKET-NAME>-${each.key}"
 
   # Terraformコマンドによる誤削除防止
