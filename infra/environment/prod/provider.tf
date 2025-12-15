@@ -24,4 +24,11 @@ terraform {
 provider "aws" {
   region  = "<REGION>"
   profile = "<IAM-USER-NAME>"
+    
+  default_tags {
+    tags = {
+      Project     = var.project
+      Environment = var.env
+    }
+  }
 }
