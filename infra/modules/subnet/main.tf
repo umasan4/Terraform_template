@@ -1,7 +1,7 @@
 #------------------------------
 # subnet
 #------------------------------
-resource "aws_subnet" "<NAME>" {
+resource "aws_subnet" "main" {
   for_each   = var.subnet_map
   vpc_id     = var.vpc_id
   cidr_block = each.value
