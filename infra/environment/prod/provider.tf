@@ -10,7 +10,7 @@ terraform {
       version = "~> 5.0"
     }
   }
-# terraform backend
+  # terraform backend
   backend "s3" {
     bucket         = "<S3-BUCKET-NAME>"
     key            = "<ENV_NAME>/terraform.tfstate"
