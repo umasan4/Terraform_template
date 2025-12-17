@@ -1,14 +1,14 @@
 #------------------------------
 # env
 #------------------------------
-variable "tags_name" { type = string }
+variable "tags" { type = string }
 
 #------------------------------
 # subnet
 #------------------------------
 variable "vpc_id" { type = string }
 
-variable "subnet_map" {
+variable "name_and_cidr" {
   description = "{key:name = value:cidr}"
   type        = map(string)
 

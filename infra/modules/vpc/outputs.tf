@@ -1,7 +1,8 @@
 #------------------------------
 # vpc
 #------------------------------
-output "vpc_id" {
-  description = "他リソースに連携用のVPC_ID"
-  value       = aws_vpc.VPC_NAME.id
+output "vpc_main" {
+  value       = aws_vpc.main.id
+  # 呼出し方法
+  # moduleで vpc = module.vpc.main 
 }
